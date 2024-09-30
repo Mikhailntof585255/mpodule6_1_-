@@ -4,22 +4,21 @@ class Animal:
 
     def __init__(self, name):
         self.name = name
-
     def eat(self, food):
         self.food = food
-        if food.eduble == True:
-            print(f"{self.name} съел {food.food} ")
+        if Plant.eduble == True:
+            print(f"{self.name} съел {food.name} ")
             self.fed = True
         else:
-            print(f"{self.name} не стал есть {food.food}")
+            print(f"{self.name} не стал есть {food.name}")
             self.alive = False
 
 
 class Plant:
     eduble = False
 
-    def __init__(self, food):
-        self.food = food
+    def __init__(self, name):
+        self.name = name
 
 
 class Flower(Plant):
@@ -45,8 +44,8 @@ p1 = Flower("Цветик семицветик")
 p2 = Fruit("Заводной апельсин")
 print(a1.name)
 print(a2.name)
-print(p1.food)
-print(p2.food)
+print(p1.name)
+print(p2.name)
 print(a1.alive)
 print(a2.fed)
 a1.eat(p1)
